@@ -1,0 +1,32 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Environment
+.env
+**/.env
+
+# Build
+dist/
+build/
+**/dist/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+postgres_data/
+
+# Prisma
+backend/prisma/dev.db
+
+# Coverage
+coverage/
