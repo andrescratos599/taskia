@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Task } from "./types/task";
 import { TaskForm } from "./components/TaskForm";
-import { TaskList } from "./components/TaskList";
 import { TaskStats } from "./components/TaskStats";
 import { TaskFilters } from "./components/TaskFilters";
 import { TaskSearch } from "./components/TaskSearch";
@@ -94,21 +93,6 @@ function App() {
       loadTasks();
     } catch (error) {
       setError("No se pudo guardar la tarea.");
-    }
-  };
-
-  const handleToggleCompleted = async (task: Task) => {
-    try {
-      setError("");
-
-      await updateTask({
-        ...task,
-        completed: !task.completed,
-      });
-
-      loadTasks();
-    } catch (error) {
-      setError("No se pudo actualizar la tarea.");
     }
   };
 
