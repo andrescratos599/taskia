@@ -23,7 +23,7 @@ model Task {
   description String?
   completed   Boolean  @default(false)
   priority    String   @default("MEDIA")
-  status String @default("PENDIENTE")
+  status      String   @default("PENDIENTE")
   createdAt   DateTime @default(now())
 
   userId Int
