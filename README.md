@@ -99,3 +99,17 @@ taskia/
 Frontend: https://taskia-l8nwx6euc-andres-barrera-s-projects.vercel.app/
 
 Backend: https://taskia-api.onrender.com
+
+## Capturas
+
+### Login
+
+![Login](docs/images/login.png)
+
+### Dashboard
+
+![Dashboard](docs/images/dashboard.png)
+
+### Kanban
+
+![Kanban](docs/images/kanban.png)
