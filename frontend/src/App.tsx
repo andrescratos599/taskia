@@ -173,19 +173,6 @@ function App() {
     setTasks([]);
   };
 
-  if (!token) {
-    if (authPage === "register") {
-      return <Register onGoToLogin={() => setAuthPage("login")} />;
-    }
-
-    return (
-      <Login
-        onLogin={handleLogin}
-        onGoToRegister={() => setAuthPage("register")}
-      />
-    );
-  }
-
   const filteredTasks = useMemo(() => {
     return tasks.filter((task) => {
       const matchesSearch =
@@ -200,6 +187,19 @@ function App() {
       return matchesSearch && matchesStatus;
     });
   }, [tasks, searchTerm, filterStatus]);
+
+  if (!token) {
+    if (authPage === "register") {
+      return <Register onGoToLogin={() => setAuthPage("login")} />;
+    }
+
+    return (
+      <Login
+        onLogin={handleLogin}
+        onGoToRegister={() => setAuthPage("register")}
+      />
+    );
+  }
 
   const handleChangeStatus = async (task: Task, newStatus: TaskStatus) => {
     const previousTasks = tasks;
