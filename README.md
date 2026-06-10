@@ -93,3 +93,9 @@ taskia/
 │
 ├── docker-compose.yml
 └── README.md
+
+## Demo en producción
+
+Frontend: https://taskia-l8nwx6euc-andres-barrera-s-projects.vercel.app/
+
+Backend: https://taskia-api.onrender.com
